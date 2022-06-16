@@ -9,13 +9,16 @@
 body {
     font-family: 'Lato', sans-serif;
     background: #fff;
-    overflow: hidden;
 }
 
 main {
     width: 75%;
     margin-left: auto;
     margin-right: auto;
+}
+
+section.header p {
+    font-weight: 300;
 }
 
 section.form {
@@ -35,7 +38,7 @@ input {
     padding: .8rem;
     outline: none;
     border-radius: 3px;
-    border: 1px solid #000;
+    border: 1px solid #00f9db;
 }
 
 input[type="text"] {
