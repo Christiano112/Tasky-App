@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="home.css">
+    <title>Home Page</title>
+</head>
+<body>
+    <header>
+        <h1>Tasky To do List</h1>
+
+        <nav class="nav" id="home-nav">
+            <ul>
+                <li><a href="javascript:void(0);" onclick="hideFunction()" class="icon"><i class="fa fa-bars"></i></a></li>
+                <li><a href="settings.html">Settings</a></li>
+                <li><a href="#">Location</a></li>
+                <li><a href="task.html">Task</a></li>
+                <li><a href="#"><i class="fa-solid fa-bell"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <script>
+        function hideFunction() {
+            var a = document.getElementById("home-nav");
+            if (a.className === "nav") {
+                a.className += " respond";
+            } else {
+                a.className = "nav";
+            }
+        }
+    </script>
+</body>
+</html>
