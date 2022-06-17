@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,45 +8,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Register</title>
+    <title>Sign Up</title>
 </head>
-
 <body>
     <main>
         <section class="header">
-            <h1>Create Account</h1>
+            <h1>Welcome back</h1>
             <p>Input your details below</p>
         </section>
-        
+
         <section class="form">
             <form action="home.html">
-                <label for="name">Full Name</label>
-                <input type="text" name="name" id="name" placeholder="Enter your full name" required>
-
-                <label for="username">Username</label>
-                <input type="text" name="username" id="username" placeholder="Enter your username" required>
-
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                <input type="email" name="email" id="email" placeholder="Email" required>
 
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" placeholder="Enter your Password" required>
-
-                <label for="confirm_password">Confirm Password</label>
-                <input type="password" name="confirm_password" id="confirm_password" placeholder="Re-enter your password" required>
+                <label for="Password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Password" required>
 
                 <div>
                     <input type="checkbox" name="Remember" id="Remember">
                     <label for="Remember">Remember me?</label>
                 </div>
 
-                <input type="submit" value="Sign Up">
+                <input type="submit" value="Sign In">
+
+                <p class="forgot"><a href="reset.html">Forgot Password</a></p>
             </form>
+            
         </section>
 
         <section class="alternate">
             <p class="or">OR</p>
-            <p>Sign Up with</p>
+            <p>Sign in with</p>
             <div class="logos">
                 <a href="#"><img src="facebook (1).png" alt="facebook-logo"></a>
                 <a href="#"><img src="google.png" alt="google logo"></a>
@@ -57,10 +49,9 @@
 
         <footer>
             <div>
-                <p>Have an account? <a href="index.html">SIGN IN</a></p>
+                <p>Don't have an account? <a href="register.html">SIGN UP</a></p>
             </div>
         </footer>
     </main>
 </body>
-
 </html>
