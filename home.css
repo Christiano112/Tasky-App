@@ -44,8 +44,24 @@ nav .icon {
 
 nav .bell {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 3%;
+    top: 3%;
+}
+
+.nav ul .user_details {
+    display: none;
+}
+
+.nav ul .edit {
+        color: #000;
+    }
+
+.nav ul .edit span {
+    margin-right: 1rem;
+}
+
+.nav ul .logout {
+    color: red;
 }
 
 a {
@@ -96,6 +112,16 @@ section .task-grid div {
     text-align: center;
 }
 
+/* .task_all, .task_second, .task_third {
+    display: none;
+} */
+
+section .task-grid .task_first h4 {
+    text-decoration: none;
+    color: #000;
+}
+
+
 
 
 
@@ -124,14 +150,42 @@ section .task-grid div {
 
     .nav.respond .icon {
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 3%;
+        left: 3%;
     }
 
     .nav.respond ul {
         display: flex;
         flex-direction: column;
-        margin: 0;
         gap: 2rem;
+        border-top-left-radius: 2rem;
+        border-bottom-left-radius: 2rem;
+        padding: 2rem;
+        background: #e9f8f6;
+    }
+
+    .nav.respond ul .user_details {
+        background: #00f9db;
+        padding: 1rem;
+    }
+
+    .nav.respond ul .edit {
+        color: #000;
+        border: 2px solid #a1fdf2;
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+
+    .nav.respond ul .edit span {
+        margin-right: 1rem;
+    }
+
+    .nav.respond ul .logout {
+        color: red;
+    }
+
+    .nav.respond ul li:last-child {
+        align-self: center;
+        margin-top: 2rem;
     }
 }
