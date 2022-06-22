@@ -19,12 +19,12 @@
         </section>
 
         <section class="form">
-            <form action="home.html">
+            <form action="home.html" id="forml">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="Email" required>
+                <input type="email" name="email" id="email" placeholder="Email" required autocomplete="email" autofocus>
 
                 <label for="Password">Password</label>
-                <input type="password" name="password" id="password" placeholder="Password" required>
+                <input type="password" name="password" id="password" placeholder="Password" required autocomplete="current-password">
 
                 <div>
                     <input type="checkbox" name="Remember" id="Remember">
@@ -54,5 +54,7 @@
             </div>
         </footer>
     </main>
+
+    <script src="api/login-api.js"></script>
 </body>
 </html>
