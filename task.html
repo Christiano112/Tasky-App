@@ -29,6 +29,26 @@
             <div id="task-list">
                 <!--New task will be added here-->
             </div>
+
+            <!--task modal-->
+            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered container">
+                    <div class="modal-content">
+                        <div class="modal-header row">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <h5 class="modal-title col-8" id="exampleModalLabel">View Task</h5>
+                            <button type="button" class="btn col" id="edit-task">
+                                <h3>Edit</h3>
+                            </button>
+
+                        </div>
+                        <div class="modal-body" id="new-modal-body">
+                            <!--task content shows here-->
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Button trigger modal -->
@@ -47,7 +67,7 @@
                     <div class="modal-header row">
                         <button type="button" class="btn-close col" data-bs-dismiss="modal" aria-label="Close"></button>
                         <h5 class="modal-title col-8" id="exampleModalLabel">Add New Task</h5>
-                        <button type="button" class="btn col" data-bs-target="#exampleModalToggle2"
+                        <button type="button" class="btn col add-task" data-bs-target="#exampleModalToggle2"
                             data-bs-toggle="modal" id="add-task">
                             <h3>Add</h3>
                         </button>
@@ -59,7 +79,7 @@
                             <textarea name="" placeholder="Notes" id="" cols="30" rows="9" value=""></textarea>
                         </div>
                         <form id="info">
-                            <div class="input-group mb-3">
+                            <div class="input-group mb-3" id="date-div">
                                 <input class="form-control" id="date" name="date" type="datetime-local" required
                                     placeholder="Date and Time">
                             </div>
@@ -72,13 +92,13 @@
                                     Set Priority
                                 </button>
                                 <div class="dropdown-menu">
-                                    <div class="form-check">
+                                    <div class="form-check" id="work-checkbox">
                                         <label for="1">Work</label>
-                                        <input type="radio" name="flexRadioDefault" id="1" value="1">
+                                        <input type="radio" name="flexRadioDefault" id="work" value="work">
                                     </div>
-                                    <div class="form-check">
+                                    <div class="form-check" id="personal-checkbox">
                                         <label for="2">Personal</label>
-                                        <input type="radio" name="flexRadioDefault" id="2" value="2">
+                                        <input type="radio" name="flexRadioDefault" id="personal" value="personal">
                                     </div>
                                     <!-- <div class="form-check">
                                         <label for="3">3</label>
