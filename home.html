@@ -20,8 +20,8 @@
                 <li><a href="javascript:void(0);" onclick="hideFunction()" class="icon"><i class="fa fa-bars"></i></a></li>
                 <!-- <li><a href="settings.html">Settings</a></li> -->
                 <!-- User Profile Details -->
-                <li class="user_details">Lolu Tunde</li>
-                <li class="user_details">lolutunde@gmail.com</li>
+                <li class="user_details" id="userFullName">Lolu Tunde</li>
+                <li class="user_details" id="userEmail">lolutunde@gmail.com</li>
                 <li class="user_details">08023409672</li>
                 <li><a href="profile.html" class="edit"><span><i class="fa-solid fa-gear"></i></span> Edit Profile</a></li>
                 <li><a href="login.html"  class="logout"><span><i class="fa-solid fa-arrow-right-from-bracket"></i></span> Log Out</a></li>
@@ -33,14 +33,14 @@
     <main>
         <section class="intro">
                 <img src="google.png" alt="Profile Pic">
-                <h3>Hi! Lolu</h3>
+                <h3 id="userUsername">Hi! Lolu</h3>
                 <!-- Paragraph Below should change as task are added and removed -->
                 <p>You have 4 task for today.</p>
         </section>
 
         <section class="task-list">
             <!-- Date Should Change with Time -->
-            <h3>Thursday, June 16 2022</h3>
+            <h3 id="todays-date">Thursday, June 16 20l22</h3>
 
             <div class="task-grid">
                 <!-- The contents in each of this 4 divs should change depending on the task -->
@@ -73,6 +73,9 @@
                 a.className = "nav";
             }
         }
+
+        d = new Date().toLocaleString();
+        document.getElementById("todays-date").innerHTML = d
     </script>
 </body>
 </html>

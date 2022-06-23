@@ -240,10 +240,10 @@ button a:active{
 
 main .take_me_home {
     position: absolute;
-    bottom: 10rem;
+    bottom: 10%;
 }
 
 main .take_me_home a {
-    /* text-decoration: none; */
+    text-decoration: none;
     color: #000;
 }
