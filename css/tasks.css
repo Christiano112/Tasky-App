@@ -99,7 +99,7 @@ button a:active{
     border-radius: 20px;
 }
 
-#title{
+#title, #new-title{
     background-color: white;
     border-radius: 15px;
     overflow: hidden;
@@ -107,7 +107,7 @@ button a:active{
     margin: 1rem 0 2rem 0;
 }
 
-#title input{
+#title input, #new-title input{
     width: 100%;
     border: none;
     box-sizing: content-box;
@@ -117,7 +117,7 @@ button a:active{
     font-size: 1.3rem;
 }
 
-#title textarea{
+#title textarea, #new-title textarea{
     width: 100%;
     resize: none;
     border: none;
@@ -126,11 +126,11 @@ button a:active{
 }
 
 
-#info {
+#info, #new-info {
     width: 100%;
 }
 
-#info div{
+#info div, #new-info div{
     width: 100%;
 }
 
@@ -139,7 +139,7 @@ button a:active{
     outline: none;
 }
 
-#date{
+#date, #new-date{
     background-color: #fff;
     margin-bottom: 1rem;
     border-radius: 15px;
@@ -166,12 +166,12 @@ button a:active{
     display: none;
 }
 
-#location{
+#location, #new-location{
     width: 100%;
     margin-bottom: 1rem;
 }
 
-#location input{
+#location input, #new-location input{
     width: 100%;
     border-radius: 15px;
     border: none;
@@ -179,13 +179,23 @@ button a:active{
     padding: 0.5rem 1rem;
 }
 
-.dropdown button{
+.dropdown button, #priority{
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 15px;
     padding: 0;
+}
+
+#priority-list{
+    display: flex;
+}
+
+#priority-list div{
+    display: inline;
+    font-size: 1.1rem;
+    margin-right: 0rem;
 }
 
 .dropdown-menu {
@@ -236,7 +246,6 @@ button a:active{
     font-size: 1.4rem;
     font-weight: 700;
 }
-
 
 main .take_me_home {
     position: absolute;
