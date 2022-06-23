@@ -63,8 +63,8 @@ document.getElementById("form").addEventListener("submit", function(a) {
 
         setTimeout(openNew, 3000)
         function openNew() {
-            alert("Registration is Successful");
-            window.open("home.html", target = "_self")
+            alert("SUCCESSFUL, Kindly Login on Next Page!");
+            window.open("login.html", target = "_self")
         }
     }
 })
