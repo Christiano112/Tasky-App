@@ -20,9 +20,9 @@
                 <li><a href="javascript:void(0);" onclick="hideFunction()" class="icon"><i class="fa fa-bars"></i></a></li>
                 <!-- <li><a href="settings.html">Settings</a></li> -->
                 <!-- User Profile Details -->
-                <li class="user_details" id="userFullName">Lolu Tunde</li>
-                <li class="user_details" id="userEmail">lolutunde@gmail.com</li>
-                <li class="user_details">08023409672</li>
+                <li class="user_details" id="userFullName" aria-disabled="false">Your Full Name</li>
+                <li class="user_details" id="userEmail" aria-disabled="false">youremail@email.com</li>
+                <li class="user_details" aria-disabled="false">Telephone</li>
                 <li><a href="profile.html" class="edit"><span><i class="fa-solid fa-gear"></i></span> Edit Profile</a></li>
                 <li><a href="login.html"  class="logout"><span><i class="fa-solid fa-arrow-right-from-bracket"></i></span> Log Out</a></li>
             </ul>
@@ -32,15 +32,15 @@
 
     <main>
         <section class="intro">
-                <img src="google.png" alt="Profile Pic">
-                <h3 id="userUsername">Hi! Lolu</h3>
-                <!-- Paragraph Below should change as task are added and removed -->
-                <p>You have 4 task for today.</p>
+                <img src="./images/Ellipse 79.jpg" alt="Profile Pic">
+                <h4 id="userUsername"></h4>
+                <!-- Quotes get updated every 10s -->
+                <p id="motivation">"Genius is one percent inspiration and ninety-nine percent perspiration"</p>
         </section>
 
         <section class="task-list">
             <!-- Date Should Change with Time -->
-            <h3 id="todays-date">Thursday, June 16 20l22</h3>
+            <h3 id="todays-date"></h3>
 
             <div class="task-grid">
                 <!-- The contents in each of this 4 divs should change depending on the task -->
@@ -58,7 +58,12 @@
                 </div> -->
                 <div class="task_first"><a href="task.html">
                     <h4>Create<br>New Task</h4>
-                </a></div>
+                    </a>
+                </div>
+                <div class="task_first"><a href="task.html">
+                        <h4>View Task</h4>
+                    </a>
+                </div>
             </div>
         </section>
     </main>
@@ -74,8 +79,22 @@
             }
         }
 
-        d = new Date().toLocaleString();
-        document.getElementById("todays-date").innerHTML = d
+        let d = new Date().toLocaleString();
+        document.getElementById("todays-date").innerHTML = d;
+
+        let da = new Date();
+        if (da.getHours() < 12) {
+            document.getElementById("userUsername").innerHTML = "Hi, Good Morning!";
+        }
+
+        else if (da.getHours() == 12 && da.getHours() < 18) {
+            document.getElementById("userUsername").innerHTML = "Hello, Good Afternoon"
+        }
+
+        else {
+            document.getElementById("userUsername").innerHTML = "Welcome, Hope you had a nice day?"
+        }
     </script>
+    <script src="api/quotes-api.js"></script>
 </body>
 </html>

@@ -90,16 +90,15 @@ section.intro img {
 
 section.task-list h3 {
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 section .task-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     gap: 1rem 0;
-    place-content: center;
     place-items: center;
+    justify-content: center;
 }
 
 section .task-grid div {
@@ -108,8 +107,10 @@ section .task-grid div {
     background: #a1fdf2;
     border-radius: 1rem;
     padding: 1rem;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     text-align: center;
+    font-size: 1rem;
+    line-height: 1rem;
 }
 
 /* .task_all, .task_second, .task_third {
@@ -123,7 +124,7 @@ section .task-grid .task_first h4 {
 
 
 
-
+/* Media Queries */
 
 @media (max-width: 770px) {
     .nav a.icon {
