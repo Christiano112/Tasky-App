@@ -73,18 +73,24 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <div id="title">
+                        <!-- <div id="title">
                             <input id="input-title" type="text" placeholder="Title">
                             <hr>
                             <textarea name="" placeholder="Notes" id="" cols="30" rows="9" value=""></textarea>
-                        </div>
+                        </div> -->
                         <form id="info">
+                            <div id="title">
+                                <input id="input-title" type="text" placeholder="Title" name="title">
+                                <hr>
+                                <textarea name="message" placeholder="Notes" id="" cols="30" rows="9" value=""></textarea>
+                            </div>
+
                             <div class="input-group mb-3" id="date-div">
                                 <input class="form-control" id="date" name="date" type="datetime-local" required
                                     placeholder="Date and Time">
                             </div>
                             <div id="location">
-                                <input class="mb-3" type="text" value="" placeholder="Add Location">
+                                <input class="mb-3" type="text" value="" placeholder="Add Location" name="location">
                             </div>
                             <div class="dropdown">
                                 <button type="button" class="btn btn-light dropdown-toggle p-2" data-bs-toggle="dropdown"
@@ -100,18 +106,6 @@
                                         <label for="2">Personal</label>
                                         <input type="radio" name="flexRadioDefault" id="personal" value="personal">
                                     </div>
-                                    <!-- <div class="form-check">
-                                        <label for="3">3</label>
-                                        <input type="radio" name="flexRadioDefault" id="3" value="3">
-                                    </div>
-                                    <div class="form-check">
-                                        <label for="4">4</label>
-                                        <input type="radio" name="flexRadioDefault" id="4" value="4">
-                                    </div>
-                                    <div class="form-check">
-                                        <label for="5">5</label>
-                                        <input type="radio" name="flexRadioDefault" id="5" value="5">
-                                    </div> -->
                                 </div>
                             </div>
                         </form>

@@ -46,6 +46,7 @@ nav .bell {
     position: absolute;
     right: 3%;
     top: 3%;
+    color: #000;
 }
 
 .nav ul .user_details {
@@ -95,33 +96,49 @@ section.task-list h3 {
 
 section .task-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem 0;
+    /* grid-template-columns: 1fr 1fr; */
+    /* gap: 1rem 0; */
     place-items: center;
     justify-content: center;
 }
 
 section .task-grid div {
-    width: 7rem;
-    height: 5rem;
+    width: 9rem;
+    height: 9rem;
     background: #a1fdf2;
     border-radius: 1rem;
     padding: 1rem;
     /* white-space: nowrap; */
-    text-align: center;
+    /* text-align: center;
     font-size: 1rem;
-    line-height: 1rem;
+    line-height: 1rem; */
+    position: relative;
 }
 
-/* .task_all, .task_second, .task_third {
-    display: none;
-} */
 
 section .task-grid .task_first h4 {
     text-decoration: none;
     color: #000;
 }
 
+section .task-grid .task_first hr {
+    height: 1px;
+    width: 7rem;
+    color: #000;
+    background-color: #000;
+    position: absolute;
+}
+
+section .task-grid .task_first hr.vertical_up {
+    transform: rotate(90deg);
+    top: 50%;
+}
+
+section .task-grid .task_first hr.horizontal {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
 
 
 /* Media Queries */
@@ -129,6 +146,7 @@ section .task-grid .task_first h4 {
 @media (max-width: 770px) {
     .nav a.icon {
         display: block;
+        color: #000;
     }
 
     .nav ul li {
@@ -153,6 +171,7 @@ section .task-grid .task_first h4 {
         position: absolute;
         top: 3%;
         left: 3%;
+        color: #000;
     }
 
     .nav.respond ul {
