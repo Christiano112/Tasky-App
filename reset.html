@@ -15,9 +15,10 @@
             <p>Enter your email to reset password</p>
         </section>
         <section class="form">
-            <form action="password_reset.html">
+            <form action="password_reset.html" id="form">
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email" placeholder="Email" required autocomplete="email" autofocus>
+                <p id="check_email"></p>
 
                 <input type="submit" value="Reset Password">
             </form>
@@ -29,5 +30,25 @@
             <p>Back to <a href="login.html">SIGN IN</a></p>
         </div>
     </footer>
+
+    <script>
+        document.getElementById("form").addEventListener("submit", function(e) {
+            e.preventDefault()
+
+            var email = document.forms.form.email.value;
+
+            if (email == null || email == "") {
+                document.getElementById("check_email").innerHTML = "Enter a valid email";
+            }
+
+            else {
+                setTimeout(openNew, 2000)
+                function openNew() {
+                    alert("Code has been set to your email. Kindly check your Email");
+                    window.open("password_reset.html", target = "_self")
+                }
+            }
+        })
+    </script>
 </body>
 </html>
