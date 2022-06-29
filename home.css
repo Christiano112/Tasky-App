@@ -49,7 +49,7 @@ nav .bell {
     color: #000;
 }
 
-.nav ul .user_details {
+.nav ul .user_details, .user_image {
     display: none;
 }
 
