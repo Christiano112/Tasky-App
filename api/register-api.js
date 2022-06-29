@@ -61,7 +61,7 @@ document.getElementById("form").addEventListener("submit", function(a) {
             .catch(err => console.log('err', err));
 
 
-        setTimeout(openNew, 3000)
+        setTimeout(openNew, 2000)
         function openNew() {
             alert("SUCCESSFUL, Kindly Login on Next Page!");
             window.open("login.html", target = "_self")

@@ -70,10 +70,13 @@ input::placeholder {
 form p#check_password, 
 p#check_password1,
 p#check_email,
+p#check_code,
 p#check_username,
 p#check_name {
     color: red;
     font-size: small;
+    margin-bottom: .5rem;
+    margin-top: -.3rem;
 }
 
 .forgot {

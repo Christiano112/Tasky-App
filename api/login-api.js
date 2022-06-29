@@ -20,7 +20,7 @@ form.addEventListener("submit", function (e) {
             } else if (res.status === 401) {
                 alert(`Incorrect password, try again!`)
             } else {
-                setTimeout(openNew, 3000)
+                setTimeout(openNew, 2000)
                 function openNew() {
                     alert("Login is Successful");
                     window.open("home.html", target = "_self")
