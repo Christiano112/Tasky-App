@@ -9,8 +9,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css">
-    <link rel="stylesheet" href="./css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./css/tasks.css">
     <link rel="icon" href="/images/Logo.svg">
 </head>
@@ -23,97 +22,72 @@
             <h2>create new task</h2>
         </div>
     </div>
-    <main class="container-sm">
+    <main class="container">
         <section>
             <h1>Tasks</h1>
-            <div id="task-list">
-                <!--New task will be added here-->
+            <ul>
+                <!--New Task will be added here-->
+            </ul>
+            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <h3>Create New Task</h3>
+            </button>
+
+            <div class="take_me_home">
+                <a href="home.html"><button>Back to Home</button></a>
             </div>
 
-            <!--task modal-->
-            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered container">
-                    <div class="modal-content">
-                        <div class="modal-header row px-4">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            <h5 class="modal-title col-8 ms-3 h4" id="exampleModalLabel">View Task</h5>
-                            <button type="button" class="btn col" id="edit-task">
-                                <h3>Edit</h3>
-                            </button>
-
+                <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content rounded-4">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close col" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                            <h5 class="modal-title col-11 text-end pe-4" id="exampleModalLabel">Add New Task</h5>
                         </div>
-                        <div class="modal-body" id="new-modal-body">
-                            <!--task content shows here-->
+                        <div class="modal-body">
+                            <form id="info">
+                                <div id="title">
+                                    <input id="input-title" type="text" placeholder="Title" name="title">
+                                    <hr>
+                                    <textarea name="message" placeholder="Notes" id="" cols="30" rows="5"
+                                        value=""></textarea>
+                                </div>
+                                <div class="input-group mb-3" id="date-div">
+                                    <input class="form-control" id="date" name="date" type="datetime-local"
+                                        placeholder="Date and Time">
+                                </div>
+                                <div id="location">
+                                    <input class="mb-3" type="text" value="" placeholder="Add Location" name="location">
+                                </div>
+                                <div class="dropdown">
+                                    <button type="button" class="btn btn-light dropdown-toggle p-2"
+                                        data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                                        Set Priority
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <div class="form-check" id="work-checkbox">
+                                            <label for="1">Work</label>
+                                            <input type="radio" name="flexRadioDefault" id="work" value="work">
+                                        </div>
+                                        <div class="form-check" id="personal-checkbox">
+                                            <label for="2">Personal</label>
+                                            <input type="radio" name="flexRadioDefault" id="personal" value="personal">
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="me-4" id="add-task" aria-label="Close"
+                                    onsubmit="return addTask()">
+                                    Add Task
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Button trigger modal -->
-        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            <h3>Create New Task</h3>
-        </button>
-
-        <div class="take_me_home">
-            <a href="home.html"><button>Back to Home</button></a>
-        </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered container">
-                <div class="modal-content">
-                    <div class="modal-header row">
-                        <button type="button" class="btn-close col" data-bs-dismiss="modal" aria-label="Close"></button>
-                        <h5 class="modal-title col-8" id="exampleModalLabel">Add New Task</h5>
-                        <button type="button" class="btn col add-task" data-bs-target="#exampleModalToggle2"
-                            data-bs-toggle="modal" id="add-task">
-                            <h3>Add</h3>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <!-- <div id="title">
-                            <input id="input-title" type="text" placeholder="Title">
-                            <hr>
-                            <textarea name="" placeholder="Notes" id="" cols="30" rows="9" value=""></textarea>
-                        </div> -->
-                        <form id="info">
-                            <div id="title">
-                                <input id="input-title" type="text" placeholder="Title" name="title">
-                                <hr>
-                                <textarea name="message" placeholder="Notes" id="" cols="30" rows="9" value=""></textarea>
-                            </div>
-
-                            <div class="input-group mb-3" id="date-div">
-                                <input class="form-control" id="date" name="date" type="datetime-local" required
-                                    placeholder="Date and Time">
-                            </div>
-                            <div id="location">
-                                <input class="mb-3" type="text" value="" placeholder="Add Location" name="location">
-                            </div>
-                            <div class="dropdown">
-                                <button type="button" class="btn btn-light dropdown-toggle p-2" data-bs-toggle="dropdown"
-                                    aria-expanded="false" data-bs-auto-close="outside">
-                                    Set Priority
-                                </button>
-                                <div class="dropdown-menu">
-                                    <div class="form-check" id="work-checkbox">
-                                        <label for="1">Work</label>
-                                        <input type="radio" name="flexRadioDefault" id="work" value="work">
-                                    </div>
-                                    <div class="form-check" id="personal-checkbox">
-                                        <label for="2">Personal</label>
-                                        <input type="radio" name="flexRadioDefault" id="personal" value="personal">
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
     </main>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
