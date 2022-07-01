@@ -4,8 +4,24 @@ section {
     margin: auto;
 }
 
+#warning{
+    position: fixed;
+    top: 2rem;
+    right: 4rem;
+    border: 3px solid red;
+    border-radius: 10px;
+    background-color: rgba(255, 0, 0, 0.1);
+    display: none;
+}
+
 section h1 {
     margin-bottom: 2rem;
+}
+
+.stylebtn, .stylebtn:focus, .stylebtn:active, .stylebtn:hover{
+    background-color: aqua;
+    outline: none;
+    border: none;
 }
 
 ul {
@@ -21,7 +37,7 @@ li {
 }
 
 .accordion {
-    display: flex;
+    display: none;
     padding: 0 1.1rem;
     align-items: center;
     justify-content: space-between;
@@ -31,6 +47,10 @@ li {
     border-radius: 15px;
     cursor: pointer;
     transition: 0.4s;
+}
+
+.show {
+    display: flex;
 }
 
 li input[type='text'] {
@@ -73,7 +93,8 @@ li button {
     transition: max-height 0.2s ease-out;
 }
 
-.panel input, .panel textarea{
+.panel input,
+.panel textarea {
     display: block;
     border: none;
     outline: none;
@@ -82,7 +103,7 @@ li button {
     width: 100%;
 }
 
-.panel textarea{
+.panel textarea {
     margin-top: 1rem;
     resize: none;
 }
@@ -245,6 +266,7 @@ button a:active {
     border-radius: 20px 20px 0 0;
     flex-direction: column;
     justify-content: center;
+    z-index: 1;
 }
 
 #created div {
