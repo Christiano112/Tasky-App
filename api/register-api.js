@@ -1,10 +1,13 @@
 // Form Validation
-document.getElementById("form").addEventListener("submit", function(a) {
+document.getElementById("formr").addEventListener("submit", function(a) {
     a.preventDefault();
 
-    var name = document.forms.form.name.value;
-    var username = document.forms.form.username.value;
-    var email = document.forms.form.email.value;
+    // var name = document.forms.form.name.value;
+    // var username = document.forms.form.username.value;
+    // var email = document.forms.form.email.value;
+    var name = document.getElementById("name").value;
+    var username = document.getElementById("username").value;
+    var email = document.getElementById("email").value;
     var password = document.forms.form.password.value;
     var confirmPassword = document.forms.form.confirm_password.value;
     var regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{3})+$/g;
@@ -43,6 +46,10 @@ document.getElementById("form").addEventListener("submit", function(a) {
     
     // API CALL
     else {
+        // document.getElementById("formr").action = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdN9jq9r_t_xHUeB3EO77JcUO495CLMP2sugX46WXnpxQFSJg/formResponse";
+        // document.getElementById("formr").method = "POST";
+        // document.location.href = "login.html";
+
         const form = document.getElementById("formr")
 
         const prePayload = new FormData(form);
@@ -61,10 +68,34 @@ document.getElementById("form").addEventListener("submit", function(a) {
             .catch(err => console.log('err', err));
 
 
-        setTimeout(openNew, 2000)
+        setTimeout(openNew, 1000)
         function openNew() {
-            alert("SUCCESSFUL, Kindly Login on Next Page!");
-            window.open("login.html", target = "_self")
+            alert("SUCCESSFUL, Kindly Go Back to Login Page And Login!");
+            window.open("login.html", target = "_self");
+        }
+
+        setTimeout(formAction, 3000)
+        function formAction() {
+            $("#formr").unbind('submit').submit()
+            document.getElementById("formr").method = "POST";
+            document.getElementById("formr").setAttribute("data-netlify", "true")
         }
     }
 })
+
+const handleSubmit = (e) => {
+    e.preventDefault();
+    let myForm = document.getElementById("formr");
+    let formData = new FormData(myForm);
+    fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+    })
+        .then(() => console.log("Form successfully submitted"))
+        .catch((error) => alert(error));
+};
+
+document
+    .querySelector("form")
+    .addEventListener("submit", handleSubmit);
