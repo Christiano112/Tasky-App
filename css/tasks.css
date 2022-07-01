@@ -245,6 +245,7 @@ button a:active {
     border-radius: 20px 20px 0 0;
     flex-direction: column;
     justify-content: center;
+    z-index: 1;
 }
 
 #created div {
