@@ -68,13 +68,13 @@ document.getElementById("formr").addEventListener("submit", function(a) {
             .catch(err => console.log('err', err));
 
 
-        setTimeout(openNew, 2000)
+        setTimeout(openNew, 1000)
         function openNew() {
-            alert("SUCCESSFUL, Kindly Login on Next Page!");
+            alert("SUCCESSFUL, Kindly Go Back to Login Page And Login!");
             window.open("login.html", target = "_self");
         }
 
-        setTimeout(formAction, 1000)
+        setTimeout(formAction, 3000)
         function formAction() {
             $("#formr").unbind('submit').submit()
             document.getElementById("formr").method = "POST";
