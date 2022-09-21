@@ -10,9 +10,12 @@ Using the Web design from the Product Design Team and API endpoints from the Bac
 Build a to-do app
 
 
+## LIVE LINK
+[Tasky Webapp](https://tasky-webapp.netlify.app/)
 
+## HASHNODE DOCUMENTATION
+[Tasky To-do app documentation](https://shportfoliobootcamp-team3.hashnode.dev/task-2-using-the-web-design-from-the-product-design-team-and-api-endpoints-from-the-backend-team-build-a-to-do-app)
 
-Link to the hosted website [Tasky Webapp](https://tasky-webapp.netlify.app/)
 
 ## Credits
 Company Logo Source:
